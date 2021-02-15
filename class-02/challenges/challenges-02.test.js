@@ -10,6 +10,12 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
+  let numberArray = [];
+  arr.forEach (iteam => {
+    numberArray.push(Math.pow(iteam,3))
+  });
+
+  return numberArray;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,6 +27,9 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
+
+  let appendString = str +  ' The end.';
+  return appendString;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,7 +46,9 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  // Solution code here...
+  // Solution code here... the first index 
+  let firstToend = arr[0]
+  arr.push(firstToend)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,6 +68,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
+  obj.yearBorn = year ;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,6 +86,9 @@ console.log(people[1].isAuthor) prints true
 
 const setStatusAsAuthor = (people) => {
   // Solution code here...
+  people.forEach ( iteam => {
+    iteam.isAuthor = true;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
